@@ -1,0 +1,99 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #DCD0FF;
+    color: #000000;
+    font-family:'Roboto Mono', monospace;
+}
+
+header { 
+    background-image: url(./assets/background.png);
+    height: 66.5em; 
+    object-fit: cover;
+}
+
+header h3 .mobile-menu{ 
+    opacity: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-menu.responsive { 
+    display: flex;
+    flex-direction: column;
+}
+
+header h3 { 
+    font-size: 2.5em;
+    color: #4B006E;
+}
+
+header .topnav li{ 
+    display: none; 
+}
+
+.mobile-menu{ 
+    width: 100vw; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+}
+
+.topnav i {  
+    font-size: 2.625em; 
+}
+
+.topnav.responsive{ 
+    position:relative; 
+    height: 10em;
+    padding-top:15px;
+	padding-bottom:10px;
+	line-height:5px;
+	width:100%; 
+}
+
+.topnav.responsive i{ 
+    position:absolute; 
+    right: 0; 
+    bottom: 4em;
+}
+
+.topnav.responsive li{ 
+    text-align:center; 
+    float: none;
+    padding:0;
+    display: inline;
+}
+
+.topnav.responsive a{ 
+    display: block;
+	padding:0;
+	text-align: left;
+	line-height:30px;
+	text-align:center;
+    font-size: 1.5em;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.875em;
+
+}
+
+
+
+@media screen and (min-width: 680px){ 
+    
+
+};
+
+
+
+
+
+
