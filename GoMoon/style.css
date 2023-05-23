@@ -11,9 +11,11 @@ body {
 }
 
 header { 
-    background-image: url(./assets/background.png);
+    width: 100vw; 
+    background-image: url(./assets/mobilebackground1.png);
     height: 66.5em; 
     object-fit: cover;
+    background-repeat: no-repeat;
 }
 
 header h3 .mobile-menu{ 
@@ -73,25 +75,55 @@ header .topnav li{
 .topnav.responsive a{ 
     display: block;
 	padding:0;
-	text-align: left;
-	line-height:30px;
 	text-align:center;
     font-size: 1.5em;
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    line-height: 1.875em;
+    line-height: 1.875em; 
+}
 
+
+.topnav.responsive .buy{ 
+    height: 2em;
+    background-color: #4B006E;
+    color: #DCD0FF; 
+    text-align: center;
+}
+
+.banner  { 
+    width: 100vw; 
+}
+
+.banner .textBanner { 
+    text-align: center;   
+    font-weight: 700;
+}
+
+.banner .textBanner span{ 
+    color:#5A4FCF;
+}
+
+.banner .textBanner h3 { 
+   font-size: 1em;
+   font-weight: 400;
+   padding: 10%; 
+}
+
+.banner .imgBanner img{ 
+    mix-blend-mode: luminosity; 
 }
 
 
 
+
+/*
 @media screen and (min-width: 680px){ 
     
 
 };
-
+*/
 
 
 
