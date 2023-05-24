@@ -13,7 +13,7 @@ body {
 header { 
     width: 100vw; 
     background-image: url(./assets/mobilebackground1.png);
-    height: 66.5em; 
+    height: 62em; 
     object-fit: cover;
     background-repeat: no-repeat;
 }
@@ -39,7 +39,7 @@ header .topnav li{
 }
 
 .mobile-menu{ 
-    width: 100vw; 
+    width: 100%; 
     display: flex; 
     align-items: center;
     justify-content: space-between;
@@ -93,12 +93,15 @@ header .topnav li{
 }
 
 .banner  { 
-    width: 100vw; 
+    width: 100%; 
 }
 
 .banner .textBanner { 
-    text-align: center;   
+    text-align: left;   
     font-weight: 700;
+    padding-right: 10%; 
+    padding-left: 10%; 
+    padding-top: 5%;
 }
 
 .banner .textBanner span{ 
@@ -106,13 +109,40 @@ header .topnav li{
 }
 
 .banner .textBanner h3 { 
-   font-size: 1em;
-   font-weight: 400;
-   padding: 10%; 
+   font-size: 1.2em;
+   font-weight: 500;
+   color: #000000;
+   padding-top: 1.5%;
+  
+   
 }
 
 .banner .imgBanner img{ 
     mix-blend-mode: luminosity; 
+}
+
+main .how{ 
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100vw; 
+    align-items: center;
+    justify-content: center;
+}
+
+main .how .explanation picture{ 
+    mix-blend-mode: hard-light;
+}
+
+main .how .content { 
+    width: 24em; 
+    background-color: rgba(48, 25, 52, 0.29);
+    border-radius: 2.5em; 
+    height: 15em; 
+    padding: 10%; 
+}
+
+main .how .content span{ 
+    color: #4B006E; 
 }
 
 
