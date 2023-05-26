@@ -10,6 +10,11 @@ body {
     font-family:'Roboto Mono', monospace;
 }
 
+body .darkact { 
+    background-color: #301934;
+    color: #FFFF;
+}
+
 header { 
     width: 100vw; 
     background-image: url(./assets/mobilebackground1.png);
@@ -134,17 +139,43 @@ main .how .explanation picture{
 }
 
 main .how .content { 
-    width: 24em; 
+    width: 22em; 
+    height: 15.5em; 
     background-color: rgba(48, 25, 52, 0.29);
     border-radius: 2.5em; 
-    height: 15em; 
-    padding: 10%; 
+    padding: 10%;
 }
 
 main .how .content span{ 
     color: #4B006E; 
 }
 
+main .how .content h2{ 
+    margin-bottom: 0.5em;
+}
+
+.how .explanation { 
+    display: flex; 
+}
+
+.how .explanation .darkmode{ 
+    width: 5em;
+    height: 2em;
+    background-color: #BFABFA;
+    color:#301934;
+    border-radius: 3em;
+    margin-top: 2em;
+    margin-right: 1.5em;
+}
+
+.darkmode.darkact{ 
+    color:#BFABFA;
+    background-color: #301934;
+}
+
+.how .explanation .darkmode i{ 
+     margin-top: 0.5em; 
+}
 
 
 
