@@ -5,15 +5,18 @@ function myFunction() {
     document.getElementsByClassName('mobile-menu')[0].classList.toggle("responsive"); 
 }
 
-let darkmode = document.querySelector(".darkmode"); 
+let darkmode = document.querySelector("object"); 
+let body = document.querySelector("body"); 
 
-darkmode.addEventListener('onclick', darkMode());
+darkmode.addEventListener('click', darkMode);
 
 function darkMode(){ 
-    document.getElementsByClassName("darkmode")[0].classList.toggle("darkact");
-    document.getElementsByName("body")[0].classList.toggle("darkact");
+    darkmode.classList.toggle("darkact");
+    body.classList.toggle("darkact");
 }
 
 // adicionar o evento onclick com a função que vamos criar 
+
+// adicionar svg no lugar dos fonts awesone para durar mais
 
 
