@@ -5,13 +5,15 @@ function myFunction() {
     document.getElementsByClassName('mobile-menu')[0].classList.toggle("responsive"); 
 }
 
-let darkmode = document.querySelector("object"); 
+let darkmode = document.querySelector(".object"); 
 let body = document.querySelector("body"); 
 
 darkmode.addEventListener('click', darkMode);
 
 function darkMode(){ 
+    darkmode.style.transition = "0.5s";
     darkmode.classList.toggle("darkact");
+    body.style.transition = "0.5s";
     body.classList.toggle("darkact");
 }
 

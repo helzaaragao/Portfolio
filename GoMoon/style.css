@@ -175,12 +175,58 @@ main .how .content h2{
     background-color: #301934;
 }
 
-.how .explanation .darkmode object{ 
+.how .explanation .darkmode img{ 
      margin-bottom: 0.5em; 
      width: 2em;
+     color:#301934;
 }
 
-/* PELO AMOR, VEJA ESSE TROÇO DOS ICONES E AJEITE O DARK THEME*/
+.cardsPackages{ 
+    width: 100vw; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center; 
+    margin-top: 3em; 
+    margin-bottom: 3em; 
+}
+
+.cardsPackages h2{ 
+    color: #4B006E;
+    font-size: 2em; 
+}
+
+.eachCardsPackages{ 
+    width: 17em;
+    color: #301934;
+}
+
+.eachCardsPackages h3{ 
+    color: #5A4FCF;
+    font-size:1.5em; 
+    font-weight: 600;
+}
+
+.eachCardsPackages picture img{ 
+    mix-blend-mode: hard-light;
+}
+
+.eachCardsPackages .solo{ 
+    margin-left: 3.1em;
+}
+
+.cardsPackages .buy { 
+    margin-top: 3em;
+    width: 15em; 
+    height: 4em;
+    background-color: #4B006E;
+    color: #DCD0FF; 
+    text-align: center;
+}
+
+/* revisar o código inteiro para encontrar as coisas feias, mudar a cor dos svg e continuar o dark theme + modal*/
+
 
 /*
 @media screen and (min-width: 680px){ 
