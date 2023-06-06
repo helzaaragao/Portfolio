@@ -51,10 +51,15 @@ header .topnav li{
     padding: 10%;
 }
 
-.topnav i {  
+.topnav .menu {  
     display: flex; 
-    width: 2.625em; 
+    width: 3.5em; 
     height: 3.5em;
+   
+}
+
+.topnav .menu path{ 
+    stroke:#4B006E;
 }
 
 .topnav.responsive{ 
@@ -66,10 +71,10 @@ header .topnav li{
 	width:100%; 
 }
 
-.topnav.responsive i{ 
+.topnav.responsive .menu{ 
     position:absolute; 
     right: 0; 
-    bottom: 4em;
+    bottom: 9.8em;
 }
 
 .topnav.responsive li{ 
@@ -173,12 +178,20 @@ main .how .content h2{
 .darkmode.darkact{ 
     color:#BFABFA;
     background-color: #301934;
+    display: flex; 
+    align-items: centerp;
 }
 
-.how .explanation .darkmode img{ 
+.darmode .circle.darkact{ 
+   
+}
+
+
+
+.how .explanation .darkmode svg{ 
      margin-bottom: 0.5em; 
      width: 2em;
-     color:#301934;
+     fill:#301934;
 }
 
 .cardsPackages{ 

@@ -5,7 +5,7 @@ function myFunction() {
     document.getElementsByClassName('mobile-menu')[0].classList.toggle("responsive"); 
 }
 
-let darkmode = document.querySelector(".object"); 
+let darkmode = document.querySelector(".circle"); 
 let body = document.querySelector("body"); 
 
 darkmode.addEventListener('click', darkMode);
