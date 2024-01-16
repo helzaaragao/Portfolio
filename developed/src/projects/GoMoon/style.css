@@ -1,0 +1,254 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #DCD0FF;
+    color: #000000;
+    font-family:'Roboto Mono', monospace;
+}
+
+body.darkact { 
+    background-color: #301934;
+    color: #FFFF;
+}
+
+header { 
+    width: 100vw; 
+    background-image: url(./assets/mobilebackground1.png);
+    height: 62em; 
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+header h3 .mobile-menu{ 
+    opacity: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-menu.responsive { 
+    display: flex;
+    flex-direction: column;
+}
+
+header h3 { 
+    font-size: 2.5em;
+    color: #4B006E;
+}
+
+header .topnav li{ 
+    display: none; 
+}
+
+.mobile-menu{ 
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+}
+
+.topnav .menu {  
+    display: flex; 
+    width: 3.5em; 
+    height: 3.5em;
+   
+}
+
+.topnav .menu path{ 
+    stroke:#4B006E;
+}
+
+.topnav.responsive{ 
+    position:relative; 
+    height: 10em;
+    padding-top:15px;
+	padding-bottom:10px;
+	line-height:5px;
+	width:100%; 
+}
+
+.topnav.responsive .menu{ 
+    position:absolute; 
+    right: 0; 
+    bottom: 9.8em;
+}
+
+.topnav.responsive li{ 
+    text-align:center; 
+    float: none;
+    padding:0;
+    display: inline;
+}
+
+.topnav.responsive a{ 
+    display: block;
+	padding:0;
+	text-align:center;
+    font-size: 1.5em;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.875em; 
+}
+
+
+.topnav.responsive .buy{ 
+    height: 2em;
+    background-color: #4B006E;
+    color: #DCD0FF; 
+    text-align: center;
+}
+
+.banner  { 
+    width: 100%; 
+}
+
+.banner .textBanner { 
+    text-align: left;   
+    font-weight: 700;
+    padding-right: 10%; 
+    padding-left: 10%; 
+    padding-top: 5%;
+}
+
+.banner .textBanner span{ 
+    color:#5A4FCF;
+}
+
+.banner .textBanner h3 { 
+   font-size: 1.2em;
+   font-weight: 500;
+   color: #000000;
+   padding-top: 1.5%;
+  
+   
+}
+
+.banner .imgBanner img{ 
+    mix-blend-mode: luminosity; 
+}
+
+main .how{ 
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100vw; 
+    align-items: center;
+    justify-content: center;
+}
+
+main .how .explanation picture{ 
+    mix-blend-mode: hard-light;
+}
+
+main .how .content { 
+    width: 22em; 
+    height: 15.5em; 
+    background-color: rgba(48, 25, 52, 0.29);
+    border-radius: 2.5em; 
+    padding: 10%;
+}
+
+main .how .content span{ 
+    color: #4B006E; 
+}
+
+main .how .content h2{ 
+    margin-bottom: 0.5em;
+}
+
+.how .explanation { 
+    display: flex; 
+}
+
+.how .explanation .darkmode{ 
+    width: 5em;
+    height: 2em;
+    background-color: #BFABFA;
+    color:#301934;
+    border-radius: 3em;
+    margin-top: 2em;
+    margin-right: 1.5em;
+}
+
+.darkmode.darkact{ 
+    color:#BFABFA;
+    background-color: #301934;
+    display: flex; 
+    align-items: centerp;
+}
+
+.darmode .circle.darkact{ 
+   
+}
+
+
+
+.how .explanation .darkmode svg{ 
+     margin-bottom: 0.5em; 
+     width: 2em;
+     fill:#301934;
+}
+
+.cardsPackages{ 
+    width: 100vw; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center; 
+    margin-top: 3em; 
+    margin-bottom: 3em; 
+}
+
+.cardsPackages h2{ 
+    color: #4B006E;
+    font-size: 2em; 
+}
+
+.eachCardsPackages{ 
+    width: 17em;
+    color: #301934;
+}
+
+.eachCardsPackages h3{ 
+    color: #5A4FCF;
+    font-size:1.5em; 
+    font-weight: 600;
+}
+
+.eachCardsPackages picture img{ 
+    mix-blend-mode: hard-light;
+}
+
+.eachCardsPackages .solo{ 
+    margin-left: 3.1em;
+}
+
+.cardsPackages .buy { 
+    margin-top: 3em;
+    width: 15em; 
+    height: 4em;
+    background-color: #4B006E;
+    color: #DCD0FF; 
+    text-align: center;
+}
+
+/* revisar o código inteiro para encontrar as coisas feias, mudar a cor dos svg e continuar o dark theme + modal*/
+
+
+/*
+@media screen and (min-width: 680px){ 
+    
+
+};
+*/
+
+
+
+
+
