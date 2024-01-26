@@ -86,4 +86,3 @@ imageInput.addEventListener('input', verification);
 descriptionInput.addEventListener('input', verification);
 saveButton.addEventListener('click', saveCharacter);
 
-export default Script;
