@@ -2,7 +2,9 @@
 function App() {
   return (
     <div>
-      <a  href="../projects/dh_projetos/dh_front2_tbbt/index.html">Ola</a>      
+      <a  href="https://afrataiza.github.io/The_big_bang_theory/">Ola</a>
+      <a href="https://github.com/afrataiza/The_big_bang_theory">Repositorio</a>
+            {/* funcionando  */}
     </div>
   )
 }
