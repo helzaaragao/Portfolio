@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @font-face { 
         font-family: 'Apercu'; 
-        src: url('./assets/font/Apercu Regular.otf') format('truetype');
+        src: url('./assets/font/apercu_Regular.ttf') format('truetype');
         font-weight: 400;
         font-style: normal;
     }
