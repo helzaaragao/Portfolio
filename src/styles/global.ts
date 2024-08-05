@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     *{
@@ -7,7 +7,15 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box; 
     }
 
+    @font-face { 
+        font-family: 'Apercu'; 
+        src: url('./assets/font/Apercu Regular.otf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+
    body, input, textarea, button {
-    font-family: ;
+    font-family: 'Apercu', sans-serif;
+   
    }
 `
