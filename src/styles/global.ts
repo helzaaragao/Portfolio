@@ -6,16 +6,20 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0; 
         box-sizing: border-box; 
     }
-
-    @font-face { 
-        font-family: 'Apercu'; 
-        src: url('./assets/font/apercu_Regular.ttf') format('truetype');
-        font-weight: 400;
-        font-style: normal;
+    
+    :focus { 
+        outline: 0;
+        box-shadow: 0 0 0 2px ${(props) => props.theme['gold-brown']};;
     }
 
    body, input, textarea, button {
-    font-family: 'Apercu', sans-serif;
-   
+    font-family: 'Roleway', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+   }
+
+   body { 
+    background-color: ${(props) => props.theme['timberwolf']};
+    color: ${(props) => props.theme['black']};
    }
 `
