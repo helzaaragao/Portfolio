@@ -3,6 +3,7 @@ import { PortfolioContainer, Profile, Projects } from "./styles";
 import { Header } from "../components/Header";
 import { Cards } from "../components/Cards";
 
+
 export function Portfolio(){ 
     return(
         <PortfolioContainer>
@@ -11,9 +12,9 @@ export function Portfolio(){
                 <h1>Olá! Eu sou a Helza. <br />
                 Atualmente focada em ReactJS.</h1>
 
-                <Header>
-                    {/* Contato, ainda resolvendo qual logica usar */}
-                </Header>
+            {/* um componente Accordion para cima*/}
+               <Header></Header>
+                  
                 
             </Profile>
        
