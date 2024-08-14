@@ -1,7 +1,7 @@
 import React from "react";
 import { PortfolioContainer, Profile, Projects } from "./styles";
 import { Header } from "../components/Header";
-import { Cards } from "../components/Cards";
+import { Card } from "../components/Cards";
 
 
 export function Portfolio(){ 
@@ -9,17 +9,14 @@ export function Portfolio(){
         <PortfolioContainer>
             
             <Profile>
-                <h1>Olá! Eu sou a Helza. <br />
-                Atualmente focada em ReactJS.</h1>
-
-            {/* um componente Accordion para cima*/}
-               <Header></Header>
-                  
-                
+                <h1>Olá! Eu sou a <span>Helza</span><br/>
+                Atualmente focada em <span>ReactJS</span></h1>
+          
+               <Header></Header>    
             </Profile>
        
             <Projects>
-            <Cards></Cards>
+            <Card></Card>
             </Projects>
         </PortfolioContainer>
     )
