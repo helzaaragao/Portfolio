@@ -9,7 +9,8 @@ export function Portfolio(){
         <PortfolioContainer>
             
             <Profile>
-                <h1>Olá! Eu sou a <span>Helza</span><br/>
+                <h1>Olá! Eu sou a <span>Helza</span>
+                <br/>
                 Atualmente focada em <span>ReactJS</span></h1>
           
                <Header></Header>    
