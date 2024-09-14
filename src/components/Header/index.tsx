@@ -11,9 +11,9 @@ export function Header(){
                         para alterar a posição do conteúdo quando o Accordion for expandido.</p>
                     </Content>
                     <HeaderAcc>
-                        <h2>Helza</h2>
+                        <p>Helza</p>
                         <Trigger>
-                            <h3>Contato</h3>
+                            <p>Contato</p>
                         </Trigger>
                     </HeaderAcc>
                    

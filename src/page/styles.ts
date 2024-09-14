@@ -14,9 +14,9 @@ export const Profile = styled.section`
     display: flex; 
     flex-direction: column;
     gap: 34.188rem;
-    padding-left: 5.125rem;
-    padding-right: 2.625rem; 
-    padding-top: 8.938rem; 
+    margin-left: 5.125rem;
+    margin-right: 2.625rem; 
+    margin-top: 8.938rem; 
     padding-bottom: 4.75rem;
 
     h1{ 
@@ -38,7 +38,9 @@ export const Profile = styled.section`
     }
 `
 export const Projects = styled.section`
-    width: 46.813rem;
-    /* height: 3.563rem; */
+    width: 60rem;
+    margin-top: 3rem;
+    margin-right: 1.3rem; 
+    border-radius: 10px; 
     background-color: ${(props) => props.theme['turkey-red']};
 `

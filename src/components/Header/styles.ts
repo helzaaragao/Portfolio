@@ -28,6 +28,7 @@ export const HeaderAcc = styled(Accordion.Header)`
     align-items: center;
     padding: 2.5rem; 
     border-radius: 10px;
+    font-size: 1.5rem;
 
     background-color: ${(props) => props.theme['black-brean']};
     color: ${(props) => props.theme['timberwolf']};
@@ -39,4 +40,7 @@ export const Trigger = styled(Accordion.Trigger)`
      height: 2.6875rem;
      background-color: ${(props) => props.theme['turkey-red']};
      color: ${(props) => props.theme['timberwolf']};
+     border: transparent;
+     border-radius: 25px; 
+     box-shadow: none;
 `
