@@ -1,21 +1,12 @@
 [
     {
         "id": 1, 
-        "image": "/assets/thebigbangtheory.png", 
-        "name": "Big Bang Theory",
+        "gif": "/assets/thebigbangtheory.png", 
+        "title": "Big Bang Theory",
         "description":"Criado com o objetivo de treinar o localStorage que foi utilizado para deixar o card que você adicionar salvo no seu navegador, mesmo ao recargar a página. Feito em 2023" ,
         "tools": "html ✦ tailwind ✦ javascript" , 
-        "Website": "https://afrataiza.github.io/The_big_bang_theory/", 
-        "Github": "https://github.com/afrataiza/The_big_bang_theory"
-
-    },
-    {
-        "id": 2, 
-        "image": "/assets/tsks.png", 
-        "name": "Tsks",
-        "description":"Criado com o objetivo de treinar usando API externas. Feio em 2023" ,
-        "tools": "html ✦ tailwind ✦ javascript ✦ API externa fornecida pelo curso" , 
-        "Website": "helzaaragao.github.io/tsks/", 
-        "Github": "https://github.com/helzaaragao/tsks"
+        "deploy_url": "https://afrataiza.github.io/The_big_bang_theory/", 
+        "github_url": "https://github.com/afrataiza/The_big_bang_theory"
     }
+   
 ]
