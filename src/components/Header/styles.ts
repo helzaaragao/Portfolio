@@ -21,17 +21,22 @@ export const Content = styled(Accordion.Content)`
 `
 
 export const HeaderAcc = styled(Accordion.Header)`
-    width: 38.6875rem; 
+    width: 100%; 
     height: 6.8125rem; 
     display: flex; 
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem; 
     border-radius: 10px;
+    margin-top: 2rem;
     font-size: 1.5rem;
 
     background-color: ${(props) => props.theme['black-brean']};
     color: ${(props) => props.theme['timberwolf']};
+      @media (min-width: 1440px) {
+        width: 38.6875rem; 
+        height: 6.8125rem; 
+      }
 `
 
 export const Trigger = styled(Accordion.Trigger)`

@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
    body, input, textarea, button {
-    font-family: 'Roleway', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1rem;
    }

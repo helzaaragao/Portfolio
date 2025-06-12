@@ -9,15 +9,13 @@ export function Portfolio(){
         <PortfolioContainer>
             
             <Profile>
-                <h1>Olá! Eu sou a <span>Helza</span>
-                <br/>
-                Atualmente focada em <span>ReactJS</span></h1>
-          
+                <h1>Olá! Eu sou a <span>Helza.</span></h1>
+                <h2>Transformo ideias em código usando <span>React.js e TypeScript.</span></h2>
                <Header></Header>    
             </Profile>
        
             <Projects>
-            <Card></Card>
+             <Card></Card>
             </Projects>
         </PortfolioContainer>
     )
