@@ -3,21 +3,52 @@ import styled from "styled-components";
 
 export const HeaderRoot = styled(Accordion.Root)`
     position: relative;     
+    width: 100%;
 `
 export const Item = styled(Accordion.Item)`
      position: relative;
+     width: 100%;
+     margin-top: 2rem;
 `
 
 export const Content = styled(Accordion.Content)`
-        max-height: 0;
+        max-height: 0;          
+        overflow: hidden;
+         background-color: ${(props) => props.theme['black-brean']};
+         color: ${(props) => props.theme['white-smoke']};
+
         &[data-state='open'] {
         max-height: 200px;
-        transition: max-height 0.3s ease-out;
-        overflow: hidden;
-        position: absolute;
-        bottom: 100%;
+        /* transition: max-height 0.4s ease-out; */
+        animation: slideUp 400ms cubic-bezier(0.32, 0.72, 0.1), fadeIn 300ms ease-out;
+        
+        /* position: absolute;
+        bottom: 100%; */
+       
   }
+      &[data-state='closed'] {
+        animation: slideUp 300ms ease-in-out cubic-bezier(0.32, 0.72, 0.1),  fadeOut 200ms ease-in;
+;
+      }
 
+      @keyframes slideUp {
+        from {
+          max-height: 0;
+          transform: translateY(20px);
+        } to {
+          max-height: 100%;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideDown {
+        from {
+          max-height: 100%;
+          transform: translateY(0);
+        } to {
+          max-height: 0;
+          transform: translateY(20px);
+        }
+      }
 `
 
 export const HeaderAcc = styled(Accordion.Header)`
