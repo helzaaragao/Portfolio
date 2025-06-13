@@ -14,13 +14,55 @@ export const Item = styled(Accordion.Item)`
 export const Content = styled(Accordion.Content)`
         max-height: 0;          
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
          background-color: ${(props) => props.theme['black-brean']};
          color: ${(props) => props.theme['white-smoke']};
 
+         div:first-child{
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          span{
+            font-size: 0.75rem;
+            text-transform: uppercase;
+
+            display: flex;
+            align-items: center;
+          }
+          h3{
+            font-size: 1.5rem;
+          }
+          p{
+            font-size: 0.875rem;
+          }
+         }
+
+         div:last-child{
+        
+          a{
+            color: ${(props) => props.theme['white-smoke']};
+            text-decoration: none;
+              h3{
+            display: flex;
+            align-items: center;
+          } 
+          p{
+             font-size: 0.875rem;
+          }
+          }
+  
+         }
+
         &[data-state='open'] {
-        max-height: 200px;
+        max-height: 31.25rem;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 2.5rem;
         /* transition: max-height 0.4s ease-out; */
         animation: slideUp 400ms cubic-bezier(0.32, 0.72, 0.1), fadeIn 300ms ease-out;
+
         
         /* position: absolute;
         bottom: 100%; */
@@ -64,6 +106,12 @@ export const HeaderAcc = styled(Accordion.Header)`
 
     background-color: ${(props) => props.theme['black-brean']};
     color: ${(props) => props.theme['timberwolf']};
+       &[data-state='open'] {
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-top: 0;
+       }
       @media (min-width: 1440px) {
         width: 38.6875rem; 
         height: 6.8125rem; 
