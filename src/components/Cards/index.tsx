@@ -1,19 +1,51 @@
 import React from "react";
 import { CardContainer, CardDescription, CardImage } from "./styles";
+import { useQuery } from "@tanstack/react-query";
+
+export interface Project {
+    id: number,
+    image: `${string}.${'png'}`,
+    title: string,
+    description: string,
+    features: Array<`${string} ${string} ${string}`>, 
+    technologies: string, 
+    deploy_url: `https://${string}`,
+    github_url: `https://github.com/${string}/${string}`;
+}
+
+const fetchProjects = async (): Promise<Project[]> => {
+    const response = await fetch('../../projects.json')
+    if(!response.ok){
+        throw new Error('A resposta da rede não foi bem-sucedida')
+    }
+    return response.json()
+}
 
 export function Card() { 
+    const {data, isLoading, error} = useQuery<Project[], Error>({
+        queryKey: ['projects'],
+        queryFn: fetchProjects,
+    })
+    if (isLoading) return <div>Carregando...</div>
+    if(error) return <div>Erro: {error.message}</div>
+    if(!data || data.length === 0) return <div>Nenhum projeto encontrado</div>
     return(
-        <CardContainer>
-            <CardImage>
-                <img src="" alt="" />
-            </CardImage>
-            <CardDescription>
-                <h3>Teste</h3>
-                <p>teste1</p>
-                <p>teste2</p>
-                <button><a href="/">Website</a></button>
-                <button><a href="/">Github</a></button>
-            </CardDescription>
-        </CardContainer>
+        <div>
+            {data.map((project) => (
+            <CardContainer key={project.id}>
+                <CardImage>
+                <img src={project.image} alt="" />
+                 </CardImage>
+                 <CardDescription>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <p>{project.features}</p>
+                <button><a href={project.deploy_url}>Website</a></button>
+                <button><a href={project.github_url}>Github</a></button>
+                </CardDescription>
+            </CardContainer>
+            ))}
+         </div>
+        
     )
 }

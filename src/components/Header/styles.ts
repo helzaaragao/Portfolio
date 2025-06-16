@@ -23,36 +23,38 @@ export const Content = styled(Accordion.Content)`
          main:first-child{
           display: flex;
           flex-direction: column;
-          gap: 1rem;
-          span{
-            font-size: 0.75rem;
-            text-transform: uppercase;
-
-            display: flex;
-            align-items: center;
+          gap: 2rem;
+          div:first-child{
+            cursor: pointer;
+           span{
+              font-size: 0.75rem;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              margin-bottom: 0.6rem;
           }
-          h3{
-            font-size: 1.5rem;
+            h3{
+              font-size: 1.5rem;
           }
-          p{
-            font-size: 0.875rem;
+            p{
+              margin-top: 0.5rem;
+              font-size: 0.875rem;
+          }
           }
          }
-
          div:last-child{
-        
           a{
             color: ${(props) => props.theme['white-smoke']};
             text-decoration: none;
               h3{
             display: flex;
             align-items: center;
+            margin-bottom: 0.3rem;
           } 
           p{
              font-size: 0.875rem;
           }
           }
-  
          }
 
         &[data-state='open'] {
@@ -62,6 +64,7 @@ export const Content = styled(Accordion.Content)`
         padding: 2.5rem;
         /* transition: max-height 0.4s ease-out; */
         animation: slideUp 400ms cubic-bezier(0.32, 0.72, 0.1), fadeIn 300ms ease-out;
+        // ISSO TA ERRADO, MUDAR!
 
         
         /* position: absolute;
@@ -98,13 +101,13 @@ export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    p{
+    a{
       font-size: 0.75rem;
       display: flex;
-       align-items: center;
+      align-items: center;
+      cursor: pointer;
     }
-    h5{
-      font-weight: normal;
+    p{
       font-size: 0.875rem;
     }
   }
@@ -113,6 +116,7 @@ export const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-top: 1rem;
 
     div{
       display: flex;
@@ -121,6 +125,12 @@ export const FormContainer = styled.div`
       label {
         font-size: 0.9rem;
       }
+       input{
+        height: 2rem;
+      }
+      textarea{
+        height: 8.063rem;
+      }
       input, textarea{
         background-color: ${(props) => props.theme['black-brean']};
        border: 1px solid  ${(props) => props.theme['timberwolf']};
@@ -128,12 +138,7 @@ export const FormContainer = styled.div`
        color: ${(props) => props.theme['white-smoke']};
        padding: 0.5rem;
       }
-      input{
-        height: 2rem;
-      }
-      textarea{
-        height: 8.063rem;
-      }
+     
     }
   }
 `
@@ -172,4 +177,5 @@ export const Trigger = styled(Accordion.Trigger)`
      border: transparent;
      border-radius: 25px; 
      box-shadow: none;
+     font-weight: bold;
 `

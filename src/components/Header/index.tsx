@@ -26,9 +26,9 @@ export function Header(){
                     <Content>
                         {showForm ? (
                             <FormContainer>
-                                <aside onClick={handleBackClick}>
-                                   <p><ArrowLeftIcon size={16} />Voltar</p> 
-                                    <h5>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais(helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</h5>
+                                <aside >
+                                   <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
+                                    <p>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais  (helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</p>
                                 </aside>
                                 <form onSubmit={handleSubmit}>
                                     <div>
@@ -48,19 +48,19 @@ export function Header(){
                             </FormContainer>
                         
                         ): (
-                            <main onClick={handleContactClick}>
-                                <div>
+                            <main>
+                                <div onClick={handleContactClick}>
                                     <span><CalendarCheckIcon size={16} /> Tempo de resposta em até 2 dias</span>
                                     <h3>Me contrate para sua equipe!</h3>
                                     <p>Disponível</p>
-                            </div>
-                        <div>
-                            <a href='https://www.linkedin.com/in/helzaaragao/' target='_blank' rel='noopener noreferrer'>
-                              <h3><LinkedinLogoIcon size={32} />helzaaragao</h3>
-                              <p>Mande mensagem direto para o meu Linkedin</p> 
-                            </a>
-                        </div>
-                            </main>
+                                </div>
+                                <div>
+                                    <a href='https://www.linkedin.com/in/helzaaragao/' target='_blank' rel='noopener noreferrer'>
+                                    <h3><LinkedinLogoIcon size={32} />helzaaragao</h3>
+                                    <p>Mande mensagem direto para o meu Linkedin</p> 
+                                    </a>
+                                </div>      
+                          </main>
                         )}
                       
                     </Content>
@@ -73,6 +73,5 @@ export function Header(){
                    
                 </Item>
             </HeaderRoot>
-// https://www.radix-ui.com/primitives/docs/components/accordion
     )
 }
