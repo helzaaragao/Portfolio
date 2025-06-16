@@ -20,7 +20,7 @@ export const Content = styled(Accordion.Content)`
          background-color: ${(props) => props.theme['black-brean']};
          color: ${(props) => props.theme['white-smoke']};
 
-         div:first-child{
+         main:first-child{
           display: flex;
           flex-direction: column;
           gap: 1rem;
@@ -91,6 +91,51 @@ export const Content = styled(Accordion.Content)`
           transform: translateY(20px);
         }
       }
+`
+
+export const FormContainer = styled.div`
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    p{
+      font-size: 0.75rem;
+      display: flex;
+       align-items: center;
+    }
+    h5{
+      font-weight: normal;
+      font-size: 0.875rem;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      label {
+        font-size: 0.9rem;
+      }
+      input, textarea{
+        background-color: ${(props) => props.theme['black-brean']};
+       border: 1px solid  ${(props) => props.theme['timberwolf']};
+       border-radius: 2px;
+       color: ${(props) => props.theme['white-smoke']};
+       padding: 0.5rem;
+      }
+      input{
+        height: 2rem;
+      }
+      textarea{
+        height: 8.063rem;
+      }
+    }
+  }
 `
 
 export const HeaderAcc = styled(Accordion.Header)`
