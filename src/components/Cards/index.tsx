@@ -1,5 +1,5 @@
 import React from "react";
-import { CardContainer, CardDescription, CardImage } from "./styles";
+import { CardBackground, CardContainer, CardImage, CardTexts } from "./styles";
 import { useQuery } from "@tanstack/react-query";
 
 export interface Project {
@@ -30,22 +30,31 @@ export function Card() {
     if(error) return <div>Erro: {error.message}</div>
     if(!data || data.length === 0) return <div>Nenhum projeto encontrado</div>
     return(
-        <div>
+        <CardBackground>
             {data.map((project) => (
             <CardContainer key={project.id}>
                 <CardImage>
-                <img src={project.image} alt="" />
-                 </CardImage>
-                 <CardDescription>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <p>{project.features}</p>
-                <button><a href={project.deploy_url}>Website</a></button>
-                <button><a href={project.github_url}>Github</a></button>
-                </CardDescription>
+                  <img src={project.image} alt="" />              
+                </CardImage>
+                <CardTexts>
+                    <div>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <div>
+                            {project.features.map((feature,idx) => (
+                                   <p key={idx}>{feature}</p>  
+                            ))}
+                        </div>
+                       <i>{project.technologies}</i>
+                    </div>
+                    <div>
+                        <button><a href={project.deploy_url}>Website</a></button>
+                        <button><a href={project.github_url}>Github</a></button>      
+                    </div>
+                </CardTexts>
             </CardContainer>
             ))}
-         </div>
+         </CardBackground>
         
     )
 }

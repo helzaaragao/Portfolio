@@ -63,6 +63,11 @@ export const Projects = styled.section`
     width: 100%;
     border-radius: 24px; 
     background-color: ${(props) => props.theme['turkey-red']};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
      @media (min-width: 1440px) {
         width: 60rem;
      }

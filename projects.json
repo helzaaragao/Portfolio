@@ -1,9 +1,9 @@
 [
     {
         "id": 1, 
-        "image": "/assets/CoffeeDelivery.png", 
+        "image": "src/assets/CoffeeDelivery.png", 
         "title": "Coffee Delivery",
-        "description":"Sistema de carrinho de compras para cafeteria com gestão de itens e cálculo automático de valores",
+        "description":"Sistema de carrinho de compras para cafeteria com gestão de itens e cálculo automático de valores.",
         "features": [
             "🛒 Adição dinâmica de itens ao carrinho (com controle de quantidades)",
             "📝 Formulário de endereço validado (UX focada em conversão)", 
@@ -15,9 +15,9 @@
     },
       {
         "id": 2, 
-        "image": "/assets/Todo.png", 
+        "image": "src/assets/Todo.png", 
         "title": "Todo",
-        "description":"Site de gerenciamento de tarefas" ,
+        "description":"Site de gerenciamento de tarefas." ,
         "features": [
             "✏️ Adição instantânea de tarefas (com validação de input)",
             "📋 Listagem automática (atualização em tempo real sem refresh)", 
@@ -30,9 +30,9 @@
    
      {
         "id": 3, 
-        "image": "/assets/NekoInn.png", 
+        "image": "src/assets/NekoInn.png", 
         "title": "Neko Inn",
-        "description":"Landing Page premium para reservas de hospedagem felina, com funcionalidade de agendamento e internacionalização" ,
+        "description":"Landing Page premium para reservas de hospedagem felina, com funcionalidade de agendamento e internacionalização." ,
         "features": [
             "📅 Sistema de agendamento integrado (com confirmação automática por e-mail)",
             "🌍 Internacionalização (i18n) – PT/EN (troca de idioma em tempo real)", 
@@ -45,7 +45,7 @@
 
      {
         "id": 4, 
-        "image": "/assets/NewsHomepage.png", 
+        "image": "src/assets/NewsHomepage.png", 
         "title": "News Homepage",
         "description":"Homepage moderna de notícias de tecnologia com layout responsivo e componentes reutilizáveis." ,
         "features": [
@@ -57,9 +57,9 @@
     },
       {
         "id": 5, 
-        "image": "/assets/GithubBlog.png", 
+        "image": "src/assets/GithubBlog.png", 
         "title": "Github Blog",
-        "description":"Blog dinâmico que consome a API do GitHub para transformar issues em posts, com busca e perfil personalizado" ,
+        "description":"Blog dinâmico que consome a API do GitHub para transformar issues em posts, com busca e perfil personalizado." ,
         "features": [
             "📌 Exibição de perfil GitHub (avatar, seguidores, bio)",
             "📝 Listagem de issues como posts (com markdown e syntax highlight)", 
