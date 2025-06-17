@@ -2,6 +2,19 @@ import * as Accordion from '@radix-ui/react-accordion'
 import React, { useState } from "react";
 import { Content, FormContainer, HeaderAcc, HeaderRoot, Item, Trigger } from './styles';
 import { ArrowLeftIcon, CalendarCheckIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import emailjs from '@emailjs/browser';
+
+interface FormData {
+    name: string, 
+    email: string, 
+    userMessage: string
+}
+
+const emailjsConfig = {
+    serviceId: import.meta.env.VITE_PUBLIC_EMAILJS_SERVICE_ID || '', 
+    templateId: import.meta.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN || '',
+    admId: import.meta.env.VITE_PUBLIC_EMAILJS_USER_ID || ''
+}
 
 export function Header(){ 
     const [showForm, setShowForm] = useState(false);
@@ -28,7 +41,7 @@ export function Header(){
                             <FormContainer>
                                 <aside >
                                    <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
-                                    <p>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais  (helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</p>
+                                    <p>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais(helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</p>
                                 </aside>
                                 <form onSubmit={handleSubmit}>
                                     <div>

@@ -48,8 +48,8 @@ export function Card() {
                        <i>{project.technologies}</i>
                     </div>
                     <div>
-                        <button><a href={project.deploy_url}>Website</a></button>
-                        <button><a href={project.github_url}>Github</a></button>      
+                        <button><a href={project.deploy_url} target="_blank">Website</a></button>
+                        <button><a href={project.github_url} target="_blank">Github</a></button>      
                     </div>
                 </CardTexts>
             </CardContainer>

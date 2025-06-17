@@ -21,6 +21,7 @@ export const CardContainer = styled.main`
      }
 `
 export const CardImage = styled.section`
+    
     img {
         width: 100%;
         border-radius: 10px;
@@ -37,6 +38,10 @@ export const CardTexts = styled.section`
         }   
         div{
             margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        i{
+            color: ${(props) => props.theme['golden-brown']};
         }
     }
    
