@@ -58,7 +58,7 @@ export const Content = styled(Accordion.Content)`
          }
 
         &[data-state='open'] {
-        max-height: 31.25rem;
+        max-height: 33rem;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         padding: 2.5rem;
@@ -139,6 +139,9 @@ export const FormContainer = styled.div`
        padding: 0.5rem;
       }
      
+    }
+    button{
+      height: 2rem;
     }
   }
 `

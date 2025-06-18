@@ -19,6 +19,17 @@ const emailjsConfig = {
 export function Header(){ 
     const [showForm, setShowForm] = useState(false);
     const [message, setMessage] = useState('');
+    const [formData, setFormData] = useState<FormData>({
+        name:'',
+        email:'',
+        userMessage:''
+    })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitSucess, setSubmitSucess] = useState(false)
+    const [submitError, setSubmitError] = useState('')
+    const [isEmailSent, setIsEmailSent] = useState(false)
+
+   
 
     const handleContactClick = () => {
         setShowForm(true)
@@ -27,11 +38,46 @@ export function Header(){
         setShowForm(false)
         setMessage('')
     }
-    const handleSubmit = (e:React.FormEvent) => {
+    const handleSubmit = async (e:React.FormEvent) => {
         e.preventDefault();
+        if (isSubmitting || isEmailSent) return;
+        setIsSubmitting(true)
+        setSubmitError('')
+        try{
+            await emailjs.send(
+                emailjsConfig.serviceId, 
+                emailjsConfig.templateId,
+                {
+                    ...formData,
+                    to_email: 'helzaragao@gmail.com',
+                    subject: `Portfólio: Mensagem de ${formData.name}`
+                },
+                emailjsConfig.admId
+            )
+            setIsEmailSent(true)
+            setSubmitSucess(true)    
+        } catch(error){
+            console.error('Erro ao enviar e-mail:', error)
+            setSubmitError('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente')
+            setIsEmailSent(false)
+        } finally{
+            setIsSubmitting(false)
+        }
         console.log('Mensagem enviada:', message)
         alert('Mensagem enviada com sucesso!')
         handleBackClick()
+    }
+    if(submitSucess){
+        return(
+            <Content>
+            <FormContainer>
+                <aside>
+                    <span>MENSAGEM ENVIADA!</span>
+                    <p></p>
+                </aside>
+            </FormContainer>
+           </Content>
+        )
     }
     return(
                 <HeaderRoot type="single" collapsible orientation='vertical'>
@@ -39,25 +85,40 @@ export function Header(){
                     <Content>
                         {showForm ? (
                             <FormContainer>
-                                <aside >
+                                {submitSucess? (
+                                    <aside>
+                                          <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
+                                          <span>MENSAGEM ENVIADA!</span>
+                                          <p>Obrigada por entrar em contato. Responderei em breve!</p>
+                                    </aside>
+                                  
+                                ) : (
+                                    <>
+                                      <aside >
                                    <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
                                     <p>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais(helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</p>
                                 </aside>
-                                <form onSubmit={handleSubmit}>
+                                  <form onSubmit={handleSubmit}>
                                     <div>
                                         <label htmlFor="name">Nome</label>
-                                        <input type="text" id='name' name='name' />
+                                        <input type="text" id='name' name='name' required/>
                                     </div>
                                     <div>
                                         <label htmlFor="email">E-mail</label>
-                                        <input type="email" id='email' name='email' />
+                                        <input type="email" id='email' name='email' required />
                                     </div>
                                     <div>
                                         <label htmlFor="userMessage">Mensagem</label>
-                                        <textarea name="userMessage" id="userMessage"></textarea>
+                                        <textarea name="userMessage" id="userMessage" required></textarea>
                                     </div>  
-                                    
+                                    <button type='submit' disabled={isSubmitting || isEmailSent}>
+                                        {isSubmitting ? 'Enviando...' : 'Enviar'}
+                                    </button>
                                 </form> 
+                                </>
+                                )}
+                              
+                              
                             </FormContainer>
                         
                         ): (
