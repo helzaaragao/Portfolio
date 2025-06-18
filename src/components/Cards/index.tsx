@@ -1,6 +1,7 @@
 import React from "react";
 import { CardBackground, CardContainer, CardImage, CardTexts } from "./styles";
 import { useQuery } from "@tanstack/react-query";
+import { GithubLogoIcon, PlayIcon } from "@phosphor-icons/react";
 
 export interface Project {
     id: number,
@@ -48,8 +49,8 @@ export function Card() {
                        <i>{project.technologies}</i>
                     </div>
                     <div>
-                        <button><a href={project.deploy_url} target="_blank">Website</a></button>
-                        <button><a href={project.github_url} target="_blank">Github</a></button>      
+                        <button><a href={project.deploy_url} target="_blank"><PlayIcon size={14} />Demo</a></button>
+                        <button><a href={project.github_url} target="_blank"><GithubLogoIcon size={14}  />Github</a></button>      
                     </div>
                 </CardTexts>
             </CardContainer>

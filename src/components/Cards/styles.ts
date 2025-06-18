@@ -11,7 +11,7 @@ export const CardContainer = styled.main`
     background-color:  ${(props) => props.theme['white-smoke']};
     padding: 1.5rem;
     border-radius: 1.813rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -35,6 +35,7 @@ export const CardTexts = styled.section`
         h3{
             font-size: 1.5rem;
             color: ${(props) => props.theme['golden-brown']};
+            margin-bottom: 0.2rem;
         }   
         div{
             margin-top: 0.5rem;
@@ -54,10 +55,16 @@ export const CardTexts = styled.section`
         width: 8.125rem;
         height: 2.688rem;
         border-radius: 3px;
+        border: none;
+       
         
         a{
             color: ${(props) => props.theme['white-smoke']};
             text-decoration: none;
+             display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
         }
        } 
     }

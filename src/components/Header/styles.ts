@@ -23,9 +23,9 @@ export const Content = styled(Accordion.Content)`
          main:first-child{
           display: flex;
           flex-direction: column;
-          gap: 2rem;
+          gap: 4rem;
           div:first-child{
-            cursor: pointer;
+          cursor: pointer;
            span{
               font-size: 0.75rem;
               text-transform: uppercase;
@@ -34,7 +34,7 @@ export const Content = styled(Accordion.Content)`
               margin-bottom: 0.6rem;
           }
             h3{
-              font-size: 1.5rem;
+              font-size: 1.4rem;
           }
             p{
               margin-top: 0.5rem;
@@ -47,9 +47,10 @@ export const Content = styled(Accordion.Content)`
             color: ${(props) => props.theme['white-smoke']};
             text-decoration: none;
               h3{
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.3rem;
+                font-size: 1.4rem;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.3rem;
           } 
           p{
              font-size: 0.875rem;
@@ -109,6 +110,15 @@ export const FormContainer = styled.div`
     }
     p{
       font-size: 0.875rem;
+    }
+    span{
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      letter-spacing: 1px;
+      justify-content: center;
+      font-weight: bold;
+      gap: 0.5rem;
     }
   }
 

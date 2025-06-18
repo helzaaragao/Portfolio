@@ -1,7 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion'
 import React, { useState } from "react";
 import { Content, FormContainer, HeaderAcc, HeaderRoot, Item, Trigger } from './styles';
-import { ArrowLeftIcon, CalendarCheckIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
+import { ArrowLeftIcon, CalendarCheckIcon, ChatCenteredDotsIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -25,7 +25,6 @@ export function Header(){
         userMessage:''
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
-    const [submitSucess, setSubmitSucess] = useState(false)
     const [submitError, setSubmitError] = useState('')
     const [isEmailSent, setIsEmailSent] = useState(false)
 
@@ -33,11 +32,23 @@ export function Header(){
 
     const handleContactClick = () => {
         setShowForm(true)
+        setIsEmailSent(false)
+        setFormData({name:'', email:'', userMessage:''})
+
     }
     const handleBackClick = () => {
         setShowForm(false)
-        setMessage('')
+        setIsEmailSent(false)
     }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const {name, value} = e.target
+        setFormData(prev => ({
+            ...prev, 
+            [name]: value
+        }))
+    }
+
     const handleSubmit = async (e:React.FormEvent) => {
         e.preventDefault();
         if (isSubmitting || isEmailSent) return;
@@ -54,8 +65,7 @@ export function Header(){
                 },
                 emailjsConfig.admId
             )
-            setIsEmailSent(true)
-            setSubmitSucess(true)    
+            setIsEmailSent(true)  
         } catch(error){
             console.error('Erro ao enviar e-mail:', error)
             setSubmitError('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente')
@@ -63,21 +73,6 @@ export function Header(){
         } finally{
             setIsSubmitting(false)
         }
-        console.log('Mensagem enviada:', message)
-        alert('Mensagem enviada com sucesso!')
-        handleBackClick()
-    }
-    if(submitSucess){
-        return(
-            <Content>
-            <FormContainer>
-                <aside>
-                    <span>MENSAGEM ENVIADA!</span>
-                    <p></p>
-                </aside>
-            </FormContainer>
-           </Content>
-        )
     }
     return(
                 <HeaderRoot type="single" collapsible orientation='vertical'>
@@ -85,13 +80,14 @@ export function Header(){
                     <Content>
                         {showForm ? (
                             <FormContainer>
-                                {submitSucess? (
+                                {isEmailSent? (
                                     <aside>
                                           <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
-                                          <span>MENSAGEM ENVIADA!</span>
-                                          <p>Obrigada por entrar em contato. Responderei em breve!</p>
+                                          <span>MENSAGEM ENVIADA
+                                               <ChatCenteredDotsIcon size={20}  weight='bold'  /></span>
+                                          <p>Obrigada por entrar em contato! Responderei em breve sua mensagem.</p>
                                     </aside>
-                                  
+                
                                 ) : (
                                     <>
                                       <aside >
@@ -101,15 +97,21 @@ export function Header(){
                                   <form onSubmit={handleSubmit}>
                                     <div>
                                         <label htmlFor="name">Nome</label>
-                                        <input type="text" id='name' name='name' required/>
+                                        <input type="text" id='name' name='name' 
+                                        value={formData.name} onChange={handleChange} 
+                                        disabled={isSubmitting} required/>
                                     </div>
                                     <div>
                                         <label htmlFor="email">E-mail</label>
-                                        <input type="email" id='email' name='email' required />
+                                        <input type="email" id='email' name='email' 
+                                        value={formData.email} onChange={handleChange} 
+                                        disabled={isSubmitting} required />
                                     </div>
                                     <div>
                                         <label htmlFor="userMessage">Mensagem</label>
-                                        <textarea name="userMessage" id="userMessage" required></textarea>
+                                        <textarea name="userMessage" id="userMessage" 
+                                        value={formData.userMessage} onChange={handleChange} 
+                                        disabled={isSubmitting} required></textarea>
                                     </div>  
                                     <button type='submit' disabled={isSubmitting || isEmailSent}>
                                         {isSubmitting ? 'Enviando...' : 'Enviar'}
@@ -117,8 +119,6 @@ export function Header(){
                                 </form> 
                                 </>
                                 )}
-                              
-                              
                             </FormContainer>
                         
                         ): (
@@ -144,7 +144,6 @@ export function Header(){
                             <p>Contato</p>
                         </Trigger>
                     </HeaderAcc>
-                   
                 </Item>
             </HeaderRoot>
     )
