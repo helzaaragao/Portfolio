@@ -3,23 +3,26 @@ import styled from "styled-components";
 export const CardBackground = styled.div`
     width: 87.46%;
     margin-top: 2rem;
+    height: 100vh;
 `
 
 export const CardContainer = styled.main`
     width: 100%; 
-    height: auto;
+    max-height: auto ; 
     background-color:  ${(props) => props.theme['white-smoke']};
     padding: 1.5rem;
     border-radius: 1.813rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
     gap: 1rem;
 
      @media (min-width: 1024px){
-        min-height: calc(100% / 2.5);
-        scroll-snap-align: start;
-        overflow: hidden;
+       
+        
+        
      }
     
      @media (min-width: 1440px) {

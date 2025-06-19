@@ -27,24 +27,16 @@ export function Card() {
         queryKey: ['projects'],
         queryFn: fetchProjects,
     })
+
+   
  
     if (isLoading) return <div>Carregando...</div>
     if(error) return <div>Erro: {error.message}</div>
     if(!data || data.length === 0) return <div>Nenhum projeto encontrado</div>
     
-    const projectsRef = useRef<HTMLDivElement>(null);
+  
 
-    useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      if (projectsRef.current?.contains(e.target as Node)) {
-        e.preventDefault();
-        projectsRef.current.scrollTop += e.deltaY;
-      }
-    };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    return () => window.removeEventListener('wheel', handleWheel);
-  }, []);
 
     return(
         <CardBackground>

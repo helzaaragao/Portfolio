@@ -6,11 +6,15 @@ export const PortfolioContainer = styled.main`
     gap: 3rem;
     flex-direction: column;
     padding: 1.2rem;
+
+    height: 100vh;
+    overflow: hidden;
     
 
       @media (min-width: 1024px) {
         flex-direction: row;
-        overflow: hidden;
+       
+        
       }
     
       @media (min-width: 1440px) {
@@ -22,10 +26,11 @@ export const PortfolioContainer = styled.main`
 `
 export const Profile = styled.section`
     width: 100%;
-    height: auto; 
     display: flex; 
     flex-direction: column;
     margin-top: 3rem; 
+
+    flex-shrink: 0;
 
     h1{  
         text-align: left;
@@ -50,9 +55,15 @@ export const Profile = styled.section`
             font-weight: bold;
         }               
     }
+    @media (min-width: 1024px) {
+         width: 40%;
+         height: 100%;
+    }
     
       @media (min-width: 1440px) {
-        width: 38.688rem;
+        width: 35%;
+        max-width: 38.688rem;
+        /* width: 38.688rem; */
         height: 49.75rem; 
         margin-left: 5.125rem;
         margin-top: 8.938rem; 
@@ -67,22 +78,33 @@ export const Profile = styled.section`
 `
 export const Projects = styled.section`
     width: 100%;
+    height: 26rem;
     border-radius: 24px; 
     background-color: ${(props) => props.theme['turkey-red']};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-   @media (min-width: 1024px){
+    flex: 1;
      overflow-y: auto;
-     scroll-snap-type: y mandatory;
+     scroll-snap-type: y proximity;
      scroll-behavior: smooth;
      -webkit-overflow-scrolling: touch;
      &::-webkit-scrollbar {
       display: 8px; 
+        }
+      margin-top: 2rem;
+       &::-webkit-scrollbar-thumb {
+        background: ${props => props.theme['golden-brown']};
+        border-radius: 4px;
+  }
+
+   @media (min-width: 1024px){
+       width: 60%;
+       margin-top: 0;
+       padding: 2rem;
      }
-   }
+ 
 
      @media (min-width: 1440px) {
         width: 60rem;
