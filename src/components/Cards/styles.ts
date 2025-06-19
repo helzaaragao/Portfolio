@@ -15,6 +15,12 @@ export const CardContainer = styled.main`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+     @media (min-width: 1024px){
+        min-height: calc(100% / 2.5);
+        scroll-snap-align: start;
+        overflow: hidden;
+     }
     
      @media (min-width: 1440px) {
          height: 55.063rem;
@@ -61,10 +67,10 @@ export const CardTexts = styled.section`
         a{
             color: ${(props) => props.theme['white-smoke']};
             text-decoration: none;
-             display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
        } 
     }

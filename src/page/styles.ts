@@ -7,6 +7,12 @@ export const PortfolioContainer = styled.main`
     flex-direction: column;
     padding: 1.2rem;
     
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        overflow: hidden;
+      }
+    
       @media (min-width: 1440px) {
         align-items: center;
         justify-content: space-between;
@@ -67,6 +73,16 @@ export const Projects = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+   @media (min-width: 1024px){
+     overflow-y: auto;
+     scroll-snap-type: y mandatory;
+     scroll-behavior: smooth;
+     -webkit-overflow-scrolling: touch;
+     &::-webkit-scrollbar {
+      display: 8px; 
+     }
+   }
 
      @media (min-width: 1440px) {
         width: 60rem;

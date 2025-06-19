@@ -17,8 +17,7 @@ const emailjsConfig = {
 }
 
 export function Header(){ 
-    const [showForm, setShowForm] = useState(false);
-    const [message, setMessage] = useState('');
+    const [showForm, setShowForm] = useState(false)
     const [formData, setFormData] = useState<FormData>({
         name:'',
         email:'',
@@ -47,6 +46,9 @@ export function Header(){
             ...prev, 
             [name]: value
         }))
+        if(submitError){
+            setSubmitError('')
+    }
     }
 
     const handleSubmit = async (e:React.FormEvent) => {
@@ -74,6 +76,7 @@ export function Header(){
             setIsSubmitting(false)
         }
     }
+    
     return(
                 <HeaderRoot type="single" collapsible orientation='vertical'>
                 <Item value="item-1">                               
@@ -116,6 +119,7 @@ export function Header(){
                                     <button type='submit' disabled={isSubmitting || isEmailSent}>
                                         {isSubmitting ? 'Enviando...' : 'Enviar'}
                                     </button>
+                                    {submitError && <p>{submitError}</p>}
                                 </form> 
                                 </>
                                 )}
