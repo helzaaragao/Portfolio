@@ -78,7 +78,6 @@ export const Profile = styled.section`
 `
 export const Projects = styled.section`
     width: 100%;
-    height: 26rem;
     border-radius: 24px; 
     background-color: ${(props) => props.theme['turkey-red']};
     display: flex;
@@ -86,23 +85,25 @@ export const Projects = styled.section`
     align-items: center;
     justify-content: center;
     flex: 1;
-     overflow-y: auto;
-     scroll-snap-type: y proximity;
-     scroll-behavior: smooth;
-     -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
      &::-webkit-scrollbar {
-      display: 8px; 
-        }
-      margin-top: 2rem;
-       &::-webkit-scrollbar-thumb {
-        background: ${props => props.theme['golden-brown']};
-        border-radius: 4px;
+    display: none; /* Oculta completamente */
   }
+
+  /* Esconde a scrollbar no Firefox */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+  will-change: transform;
 
    @media (min-width: 1024px){
        width: 60%;
        margin-top: 0;
-       padding: 2rem;
+       max-height: calc(100vh - 2.4rem);
+       
      }
  
 

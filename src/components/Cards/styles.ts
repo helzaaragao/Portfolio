@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const CardBackground = styled.div`
     width: 87.46%;
     margin-top: 2rem;
-    height: 100vh;
+    height: 100%;
+  
 `
 
 export const CardContainer = styled.main`
@@ -15,9 +16,17 @@ export const CardContainer = styled.main`
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    scroll-snap-align: start;
+    
+    
     overflow: hidden;
     gap: 1rem;
+
+    &:first-child{
+        margin-top: 0.5rem;
+    }
+    /* &:last-child{
+        margin-bottom: 4rem;
+    } */
 
      @media (min-width: 1024px){
        

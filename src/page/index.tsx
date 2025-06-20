@@ -30,7 +30,10 @@ export function Portfolio(){
             </Profile>
        
             <Projects ref={projectsRef}>
-             <Card></Card>
+             
+               <Card></Card>
+            
+           
             </Projects>
         </PortfolioContainer>
     )
