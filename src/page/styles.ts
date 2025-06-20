@@ -6,9 +6,10 @@ export const PortfolioContainer = styled.main`
     gap: 3rem;
     flex-direction: column;
     padding: 1.2rem;
-
+    position: fixed;
     height: 100vh;
     overflow: hidden;
+   
     
 
       @media (min-width: 1024px) {
@@ -57,7 +58,7 @@ export const Profile = styled.section`
     }
     @media (min-width: 1024px) {
          width: 40%;
-         height: 100%;
+         height: auto;
     }
     
       @media (min-width: 1440px) {
@@ -67,7 +68,7 @@ export const Profile = styled.section`
         height: 49.75rem; 
         margin-left: 5.125rem;
         margin-top: 8.938rem; 
-        gap: 34.188rem;
+        /* gap: 34.188rem; */
         padding-bottom: 4.75rem;
         h1{
               width: 35.75rem; 
@@ -84,25 +85,24 @@ export const Projects = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    /* flex: 1; */
     overflow-y: auto;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    
      &::-webkit-scrollbar {
-    display: none; /* Oculta completamente */
+    display: none; 
   }
-
-  /* Esconde a scrollbar no Firefox */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE e Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
   will-change: transform;
 
    @media (min-width: 1024px){
        width: 60%;
        margin-top: 0;
-       max-height: calc(100vh - 2.4rem);
+       max-height: calc(100vh - 36.063rem);
+       position: relative; 
+       
        
      }
  

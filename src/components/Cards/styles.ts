@@ -35,7 +35,7 @@ export const CardContainer = styled.main`
      }
     
      @media (min-width: 1440px) {
-         height: 55.063rem;
+        
      }
 `
 export const CardImage = styled.section`
