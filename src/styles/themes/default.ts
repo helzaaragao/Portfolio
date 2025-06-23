@@ -1,5 +1,5 @@
 export const defaultTheme = { 
-        'black': '000000',
+        'black': '#000000',
         'white-smoke': '#F3F3F3', 
         'timberwolf': '#D9D9D9', 
         'golden-gate-bridge': '#F44708', 

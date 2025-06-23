@@ -28,42 +28,35 @@ export function Card() {
         queryFn: fetchProjects,
     })
 
-   
- 
     if (isLoading) return <div>Carregando...</div>
     if(error) return <div>Erro: {error.message}</div>
     if(!data || data.length === 0) return <div>Nenhum projeto encontrado</div>
     
-  
-
-
-
     return(
         <CardBackground>
             {data.map((project) => (
-            <CardContainer key={project.id}>
-                <CardImage>
-                  <img src={project.image} alt="" />              
-                </CardImage>
-                <CardTexts>
-                    <div>
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
+                <CardContainer key={project.id}>
+                    <CardImage>
+                        <img src={project.image} />              
+                    </CardImage>
+                    <CardTexts>
                         <div>
-                            {project.features.map((feature,idx) => (
-                                   <p key={idx}>{feature}</p>  
-                            ))}
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                            <div>
+                                {project.features.map((feature,idx) => (
+                                    <p key={idx}>{feature}</p>  
+                                ))}
+                            </div>
+                            <i>{project.technologies}</i>
                         </div>
-                       <i>{project.technologies}</i>
-                    </div>
-                    <div>
-                        <button><a href={project.deploy_url} target="_blank"><PlayIcon size={14} />Demo</a></button>
-                        <button><a href={project.github_url} target="_blank"><GithubLogoIcon size={14}  />Github</a></button>      
-                    </div>
-                </CardTexts>
-            </CardContainer>
+                        <div>
+                            <button><a href={project.deploy_url} target="_blank"><PlayIcon size={14} />Demo</a></button>
+                            <button><a href={project.github_url} target="_blank"><GithubLogoIcon size={14}/>Github</a></button>      
+                        </div>
+                    </CardTexts>
+                </CardContainer>
             ))}
-         </CardBackground>
-        
+        </CardBackground>  
     )
 }

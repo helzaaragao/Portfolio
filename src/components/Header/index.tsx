@@ -32,7 +32,10 @@ export function Header(){
     const handleContactClick = () => {
         setShowForm(true)
         setIsEmailSent(false)
-        setFormData({name:'', email:'', userMessage:''})
+        setFormData({
+            name:'', 
+            email:'', 
+            userMessage:'' })
 
     }
     const handleBackClick = () => {
@@ -80,52 +83,51 @@ export function Header(){
     return(
         <HeaderRoot type="single" collapsible orientation='vertical'>
             <Item value="item-1">                               
-                    <Content>
-                        {showForm ? (
-                            <FormContainer>
-                                {isEmailSent? (
-                                    <aside>
-                                          <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
-                                          <span>MENSAGEM ENVIADA
-                                               <ChatCenteredDotsIcon size={20}  weight='bold'  /></span>
-                                          <p>Obrigada por entrar em contato! Responderei em breve sua mensagem.</p>
-                                    </aside>
-                
-                                ) : (
-                                    <>
-                                      <aside >
-                                   <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
-                                    <p>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais(helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</p>
+                <Content>
+                    {showForm ? (
+                        <FormContainer>
+                            {isEmailSent? (
+                                <aside>
+                                    <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
+                                    <span>MENSAGEM ENVIADA
+                                    <ChatCenteredDotsIcon size={20}  weight='bold'  /></span>
+                                    <p>Obrigada por entrar em contato! Responderei em breve sua mensagem.</p>
                                 </aside>
-                                  <form onSubmit={handleSubmit}>
-                                    <div>
-                                        <label htmlFor="name">Nome</label>
-                                        <input type="text" id='name' name='name' 
-                                        value={formData.name} onChange={handleChange} 
-                                        disabled={isSubmitting} required/>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="email">E-mail</label>
-                                        <input type="email" id='email' name='email' 
-                                        value={formData.email} onChange={handleChange} 
-                                        disabled={isSubmitting} required />
-                                    </div>
-                                    <div>
-                                        <label htmlFor="userMessage">Mensagem</label>
-                                        <textarea name="userMessage" id="userMessage" 
-                                        value={formData.userMessage} onChange={handleChange} 
-                                        disabled={isSubmitting} required></textarea>
-                                    </div>  
-                                    <button type='submit' disabled={isSubmitting || isEmailSent}>
-                                        {isSubmitting ? 'Enviando...' : 'Enviar'}
-                                    </button>
-                                    {submitError && <p>{submitError}</p>}
-                                </form> 
+                            ) : (
+                                <>
+                                    <aside >
+                                        <a onClick={handleBackClick}><ArrowLeftIcon size={16} />Voltar</a> 
+                                        <p>O e-mail que você estará mandando mensagem é exclusivamente para e-mails profissionais(helzaragao@gmail.com), qualquer outro tópico mande pelo Linkedin!</p>
+                                    </aside>
+                                    <form onSubmit={handleSubmit}>
+                                        <div>
+                                            <label htmlFor="name">Nome</label>
+                                            <input type="text" id='name' name='name' 
+                                            value={formData.name} onChange={handleChange} 
+                                            disabled={isSubmitting} required/>
+                                        </div>
+                                        <div>
+                                            <label htmlFor="email">E-mail</label>
+                                            <input type="email" id='email' name='email' 
+                                            value={formData.email} onChange={handleChange} 
+                                            disabled={isSubmitting} required />
+                                        </div>
+                                        <div>
+                                            <label htmlFor="userMessage">Mensagem</label>
+                                            <textarea name="userMessage" id="userMessage" 
+                                            value={formData.userMessage} onChange={handleChange} 
+                                            disabled={isSubmitting} required></textarea>
+                                        </div>  
+                                        <button type='submit' disabled={isSubmitting || isEmailSent}>
+                                            {isSubmitting ? 'Enviando...' : 'Enviar'}
+                                        </button>
+                                        {submitError && <p>{submitError}</p>}
+                                    </form> 
                                 </>
                                 )}
                             </FormContainer>
                         
-                        ): (
+                        ) : (
                             <main>
                                 <div onClick={handleContactClick}>
                                     <span><CalendarCheckIcon size={16} /> Tempo de resposta em até 2 dias</span>
@@ -138,17 +140,17 @@ export function Header(){
                                     <p>Mande mensagem direto para o meu Linkedin</p> 
                                     </a>
                                 </div>      
-                          </main>
+                            </main>
                         )}
                       
-                    </Content>
-                    <HeaderAcc>
-                        <p>Helza</p>
-                        <Trigger>
-                            <p>Contato</p>
-                        </Trigger>
-                    </HeaderAcc>
-                </Item>
-            </HeaderRoot>
+                </Content>
+                <HeaderAcc>
+                    <p>Helza</p>
+                    <Trigger>
+                        <p>Contato</p>
+                    </Trigger>
+                </HeaderAcc>
+            </Item>
+        </HeaderRoot>
     )
 }

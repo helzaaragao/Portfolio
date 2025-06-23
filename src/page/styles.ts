@@ -12,12 +12,6 @@ export const PortfolioContainer = styled.main`
     @media (min-width: 1024px) {
         flex-direction: row;
     }
-    
-    /* @media (min-width: 1440px) {
-        
-    } */
-    
-
 `
 export const Profile = styled.section`
   width: 100%;
@@ -73,7 +67,6 @@ export const Projects = styled.section`
   border-radius: 24px; 
   background-color: ${(props) => props.theme['turkey-red']};
   overflow-y: auto;
-  /* scroll-snap-type: y proximity; */
   scroll-behavior: smooth;
   scrollbar-width: none; 
   -webkit-overflow-scrolling: touch;
