@@ -2,37 +2,33 @@ import * as Accordion from '@radix-ui/react-accordion'
 import styled from "styled-components";
 
 export const HeaderRoot = styled(Accordion.Root)`
-    position: relative;     
-    width: 100%;
+  width: 100%;    
 `
 export const Item = styled(Accordion.Item)`
-     position: relative;
-     width: 100%;
-     margin-top: 2rem;
+  margin-top: 2rem;
 `
 
-export const Content = styled(Accordion.Content)`
-        max-height: 0;          
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-         background-color: ${(props) => props.theme['black-brean']};
-         color: ${(props) => props.theme['white-smoke']};
+export const Content = styled(Accordion.Content)`         
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: ${(props) => props.theme['black-brean']};
+  color: ${(props) => props.theme['white-smoke']};
+  overflow: hidden;
 
-         main:first-child{
-          display: flex;
-          flex-direction: column;
-          gap: 4rem;
-          div:first-child{
-          cursor: pointer;
-           span{
-              font-size: 0.75rem;
-              text-transform: uppercase;
-              display: flex;
-              align-items: center;
-              margin-bottom: 0.6rem;
-          }
+    main:first-child{
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      div:first-child{
+      cursor: pointer;
+      span{
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.6rem;
+      }
             h3{
               font-size: 1.4rem;
           }
@@ -157,7 +153,7 @@ export const HeaderAcc = styled(Accordion.Header)`
         margin-top: 0;
        }
       @media (min-width: 1440px) {
-        width: 38.6875rem; 
+        width: 100%; 
         height: 6.8125rem; 
       }
 `

@@ -16,24 +16,23 @@ export function Portfolio(){
           }
         };
         if (!isTouchDevice) {
-  window.addEventListener('wheel', handleWheel, { passive: false });
-  return () => window.removeEventListener('wheel', handleWheel);
-}
+        window.addEventListener('wheel', handleWheel, { passive: false });
+        return () => window.removeEventListener('wheel', handleWheel);
+        }
         
       }, []);
     return(
         <PortfolioContainer>
             <Profile>
+              <div>
                 <h1>Olá! Eu sou a <span>Helza.</span></h1>
                 <h2>Transformo ideias em código usando <span>React.js e TypeScript.</span></h2>
+              </div>
                <Header></Header>    
             </Profile>
        
             <Projects ref={projectsRef}>
-             
                <Card></Card>
-            
-           
             </Projects>
         </PortfolioContainer>
     )

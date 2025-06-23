@@ -1,113 +1,94 @@
 import styled from "styled-components";
 
 export const PortfolioContainer = styled.main`
-    width: 100vw;
-    display: flex;
-    gap: 3rem;
-    flex-direction: column;
-    padding: 1.2rem;
-    position: fixed;
-    height: 100vh;
-    overflow: hidden;
-   
-    
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.2rem;
+  overflow: hidden;
 
-      @media (min-width: 1024px) {
+    @media (min-width: 1024px) {
         flex-direction: row;
-       
-        
-      }
+    }
     
-      @media (min-width: 1440px) {
-        align-items: center;
-        justify-content: space-between;
-      }
+    /* @media (min-width: 1440px) {
+        
+    } */
     
 
 `
 export const Profile = styled.section`
-    width: 100%;
-    display: flex; 
-    flex-direction: column;
-    margin-top: 3rem; 
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  margin-top: 3rem; 
+  flex-shrink: 0;
 
-    flex-shrink: 0;
-
+  div:first-child{
     h1{  
-        text-align: left;
-        font-size: 2rem;
-        font-weight: 500;
-
-        span { 
-            color:  ${(props) => props.theme['golden-brown']}; 
-            font-style: italic;
-            font-weight: bold;
-
-        }
-       
-
+      text-align: left;
+      font-size: 2rem;
+      font-weight: 500;
+      span { 
+        color:  ${(props) => props.theme['golden-brown']}; 
+        font-style: italic;
+        font-weight: bold;
+      }
     }
     h2{
       font-size: 1.5rem;
-        font-weight: 500;
+      font-weight: 500;
       span { 
-            color:  ${(props) => props.theme['golden-brown']}; 
-            font-style: italic;
-            font-weight: bold;
+          color:  ${(props) => props.theme['golden-brown']}; 
+          font-style: italic;
+          font-weight: bold;
         }               
     }
+  }
+ 
     @media (min-width: 1024px) {
-         width: 40%;
-         height: auto;
+      width: 40%;
+      height: auto;
+      justify-content: space-between;
     }
     
-      @media (min-width: 1440px) {
-        width: 35%;
-        max-width: 38.688rem;
-        /* width: 38.688rem; */
-        height: 49.75rem; 
-        margin-left: 5.125rem;
-        margin-top: 8.938rem; 
-        /* gap: 34.188rem; */
-        padding-bottom: 4.75rem;
-        h1{
-              width: 35.75rem; 
-              font-size: 2.5rem;
-        }
-
+    @media (min-width: 1440px) {
+      padding: 2rem;
+    
+      h1{
+        width: 35.75rem; 
+        font-size: 2.5rem;
       }
+
+    }
 `
 export const Projects = styled.section`
-    width: 100%;
-    border-radius: 24px; 
-    background-color: ${(props) => props.theme['turkey-red']};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* flex: 1; */
-    overflow-y: auto;
-    /* scroll-snap-type: y proximity; */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-     &::-webkit-scrollbar {
-    display: none; 
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px; 
+  background-color: ${(props) => props.theme['turkey-red']};
+  overflow-y: auto;
+  /* scroll-snap-type: y proximity; */
+  scroll-behavior: smooth;
   scrollbar-width: none; 
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none; 
-  will-change: transform;
+     &::-webkit-scrollbar {
+      display: none; 
+    }
 
    @media (min-width: 1024px){
-       width: 60%;
-       margin-top: 0;
-       max-height: calc(100vh - 36.063rem);
-       position: relative; 
-       
-       
-     }
- 
+      width: 60%;
+      max-height: calc(100vh - auto);  
+      // mudei o de cima para de algo estático para auto
+    }
 
-     @media (min-width: 1440px) {
-        width: 60rem;
-     }
+    @media (min-width: 1440px) {
+      margin: 1rem;
+    }
 `

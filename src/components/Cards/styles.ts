@@ -24,9 +24,6 @@ export const CardContainer = styled.main`
     &:first-child{
         margin-top: 0.5rem;
     }
-    /* &:last-child{
-        margin-bottom: 4rem;
-    } */
 
      @media (min-width: 1024px){
        
@@ -35,7 +32,9 @@ export const CardContainer = styled.main`
      }
     
      @media (min-width: 1440px) {
-        
+         &:first-child{
+        margin-top: 1rem;
+    }
      }
 `
 export const CardImage = styled.section`
