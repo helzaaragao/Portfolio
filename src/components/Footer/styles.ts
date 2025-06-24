@@ -61,7 +61,6 @@ export const Content = styled(Accordion.Content)`
         }
       }
     }
-      
 
     &[data-state='open'] {
       max-height: 18rem;
@@ -69,11 +68,21 @@ export const Content = styled(Accordion.Content)`
       border-top-left-radius: 10px;
       padding: 2.5rem;
       transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease, border-radius 0.4s ease;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
     }
     &[data-state='closed'] {
       max-height: 0;
       transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, padding 0.4s ease, border-radius 0.3s ease;
     }
+
+     @media (min-width: 1280px) {
+      &[data-state='open'] {
+        max-height: 20rem;
+      }
+     }
 `
 
 export const FormContainer = styled.div`
@@ -106,7 +115,7 @@ export const FormContainer = styled.div`
     flex-direction: column;
     gap: 1rem;
     margin-top: 1rem;
-
+   
     div{
       display: flex;
       flex-direction: column;
@@ -156,6 +165,7 @@ export const HeaderAcc = styled(Accordion.Header)`
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       margin-top: 0;
+      position: sticky;
     }
      @media (min-width: 1440px) {
       margin-top: 0;
