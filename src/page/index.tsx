@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PortfolioContainer, Profile, Projects } from "./styles";
-import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 import { Card } from "../components/Cards";
 
 
 export function Portfolio(){ 
      const projectsRef = useRef<HTMLDivElement>(null);
-    
+
         useEffect(() => {
             const isTouchDevice = 'ontouchstart' in window;
         const handleWheel = (e: WheelEvent) => {
@@ -28,9 +28,8 @@ export function Portfolio(){
                 <h1>Olá! Eu sou a <span>Helza.</span></h1>
                 <h2>Transformo ideias em código usando <span>React.js e TypeScript.</span></h2>
               </div>
-               <Header></Header>    
+              <Footer></Footer>    
             </Profile>
-       
             <Projects ref={projectsRef}>
                <Card></Card>
             </Projects>

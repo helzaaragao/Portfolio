@@ -71,6 +71,9 @@ export const CardTexts = styled.section`
                 text-decoration: none;
                 gap: 0.5rem;
                 color: ${(props) => props.theme['white-smoke']};
+                &:focus{
+                    box-shadow: none;
+                }
             }
         } 
     }

@@ -1,6 +1,6 @@
 import * as Accordion from '@radix-ui/react-accordion'
 import React, { useState } from "react";
-import { Content, FormContainer, HeaderAcc, HeaderRoot, Item, Trigger } from './styles';
+import { Content, FooterRoot, FormContainer, HeaderAcc, Item, Trigger } from './styles';
 import { ArrowLeftIcon, CalendarCheckIcon, ChatCenteredDotsIcon, LinkedinLogoIcon } from '@phosphor-icons/react';
 import emailjs from '@emailjs/browser';
 
@@ -16,7 +16,7 @@ const emailjsConfig = {
     admId: import.meta.env.VITE_PUBLIC_EMAILJS_USER_ID || ''
 }
 
-export function Header(){ 
+export function Footer(){ 
     const [showForm, setShowForm] = useState(false)
     const [formData, setFormData] = useState<FormData>({
         name:'',
@@ -81,8 +81,8 @@ export function Header(){
     }
     
     return(
-        <HeaderRoot type="single" collapsible orientation='vertical'>
-            <Item value="item-1">                               
+        <FooterRoot type="single" collapsible orientation='vertical'>
+            <Item value="item-1">                           
                 <Content>
                     {showForm ? (
                         <FormContainer>
@@ -151,6 +151,6 @@ export function Header(){
                     </Trigger>
                 </HeaderAcc>
             </Item>
-        </HeaderRoot>
+        </FooterRoot>
     )
 }

@@ -77,8 +77,6 @@ export const Projects = styled.section`
 
    @media (min-width: 1024px){
       width: 60%;
-      max-height: calc(100vh - auto);  
-      // mudei o de cima para de algo estático para auto
     }
 
     @media (min-width: 1440px) {

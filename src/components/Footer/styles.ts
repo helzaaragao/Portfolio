@@ -1,11 +1,14 @@
 import * as Accordion from '@radix-ui/react-accordion'
 import styled from "styled-components";
 
-export const HeaderRoot = styled(Accordion.Root)`
+export const FooterRoot = styled(Accordion.Root)`
   width: 100%;    
 `
 export const Item = styled(Accordion.Item)`
   margin-top: 2rem;
+   @media (min-width: 1440px) {
+    margin-top: 0;
+   }
 `
 
 export const Content = styled(Accordion.Content)`         
@@ -52,13 +55,16 @@ export const Content = styled(Accordion.Content)`
           p{
              font-size: 0.875rem;
           }
+          &:focus{
+            box-shadow: none;
+          }
         }
       }
     }
       
 
     &[data-state='open'] {
-      max-height: 33rem;
+      max-height: 18rem;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
       padding: 2.5rem;
@@ -91,7 +97,7 @@ export const FormContainer = styled.div`
         letter-spacing: 1px;
       }
       p{
-        font-size: 0.875rem;
+        font-size: 0.8rem;
       }
   }
 
@@ -113,7 +119,7 @@ export const FormContainer = styled.div`
         height: 2rem;
       }
       textarea{
-        height: 8.063rem;
+        height: 6rem;
       }
       input, textarea{
         border-radius: 2px;
@@ -151,16 +157,23 @@ export const HeaderAcc = styled(Accordion.Header)`
       border-bottom-right-radius: 10px;
       margin-top: 0;
     }
+     @media (min-width: 1440px) {
+      margin-top: 0;
+     }
 `
 
 export const Trigger = styled(Accordion.Trigger)`
-     cursor: pointer;
      width: 6.9375rem; 
      height: 2.6875rem;
      border-radius: 25px; 
      border: transparent;
      box-shadow: none;
      font-weight: bold;
+     cursor: pointer;
      background-color: ${(props) => props.theme['turkey-red']};
      color: ${(props) => props.theme['timberwolf']};
+     
+      &:hover{
+        background-color: ${(props) => props.theme['tyrian-purple']};
+      }
 `
