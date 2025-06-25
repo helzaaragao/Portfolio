@@ -37,7 +37,7 @@ export function Card() {
             {data.map((project) => (
                 <CardContainer key={project.id}>
                     <CardImage>
-                        <img src={`/Portfolio/src${project.image}`} />              
+                        <img src={`/Portfolio${project.image}`} />              
                     </CardImage>
                     <CardTexts>
                         <div>
