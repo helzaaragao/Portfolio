@@ -1,7 +1,7 @@
 [
     {
         "id": 1, 
-        "image": "src/assets/CoffeeDelivery.png", 
+        "image": "/assets/CoffeeDelivery.png", 
         "title": "Coffee Delivery",
         "description":"Sistema de carrinho de compras para cafeteria com gestão de itens e cálculo automático de valores.",
         "features": [
@@ -15,7 +15,7 @@
     },
       {
         "id": 2, 
-        "image": "src/assets/Todo.png", 
+        "image": "/assets/Todo.png", 
         "title": "Todo",
         "description":"Site de gerenciamento de tarefas." ,
         "features": [
@@ -30,7 +30,7 @@
    
      {
         "id": 3, 
-        "image": "src/assets/NekoInn.png", 
+        "image": "/assets/NekoInn.png", 
         "title": "Neko Inn",
         "description":"Landing Page premium para reservas de hospedagem felina, com funcionalidade de agendamento e internacionalização." ,
         "features": [
@@ -45,7 +45,7 @@
 
      {
         "id": 4, 
-        "image": "src/assets/NewsHomepage.png", 
+        "image": "/assets/NewsHomepage.png", 
         "title": "News Homepage",
         "description":"Homepage moderna de notícias de tecnologia com layout responsivo e componentes reutilizáveis." ,
         "features": [
@@ -57,7 +57,7 @@
     },
       {
         "id": 5, 
-        "image": "src/assets/GithubBlog.png", 
+        "image": "/assets/GithubBlog.png", 
         "title": "Github Blog",
         "description":"Blog dinâmico que consome a API do GitHub para transformar issues em posts, com busca e perfil personalizado." ,
         "features": [

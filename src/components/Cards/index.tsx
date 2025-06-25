@@ -15,7 +15,7 @@ export interface Project {
 }
 
 const fetchProjects = async (): Promise<Project[]> => {
-    const response = await fetch('../../projects.json')
+    const response = await fetch('./projects.json')
     if(!response.ok){
         throw new Error('A resposta da rede não foi bem-sucedida')
     }
@@ -37,7 +37,7 @@ export function Card() {
             {data.map((project) => (
                 <CardContainer key={project.id}>
                     <CardImage>
-                        <img src={project.image} />              
+                        <img src={`/Portfolio/src${project.image}`} />              
                     </CardImage>
                     <CardTexts>
                         <div>
