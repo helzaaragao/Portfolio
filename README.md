@@ -10,7 +10,7 @@ Este portfólio reúne meus projetos mais relevantes em **desenvolvimento Front-
 
 | Mobile | Tablet | Desktop | 
 |--------|---------|---------|
-| <img src="./src/assets/mobile-portfolio.png" width="300"> | <img src="./src/assets/tablet-portfolio.png" width="450"> | <img src="./src/assets/desktop-portfolio.png" width="800"> |
+| <img src="public/assets/mobile-portfolio.png" width="300"> | <img src="public/assets/tablet-portfolio.png" width="450"> | <img src="public/assets/desktop-portfolio.png" width="800"> |
 
 *Imagens meramente ilustrativas, pois ela pode mudar dependendo do tamanho da tela utilizada!*
 
