@@ -6,7 +6,9 @@
   <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
 </div>
 
-Este portfólio reúne meus projetos mais relevantes em **desenvolvimento Front-end com React e TypeScript**, destacando minha capacidade de criar soluções escaláveis e perfomáticas. Cada trabalho reflete meu aprendizado contínuo, habilidades técnicas e capacidade de resolver problemas complexos. **Interface desenvolvida de forma independente!**
+Este portfólio reúne meus projetos mais relevantes em **desenvolvimento Front-end com React e TypeScript**, destacando minha capacidade de criar soluções escaláveis e perfomáticas. Cada trabalho reflete meu aprendizado contínuo, habilidades técnicas e capacidade de resolver problemas complexos. 
+
+**Interface desenvolvida de forma independente!**
 
 | Mobile | Tablet | Desktop | 
 |--------|---------|---------|
@@ -16,17 +18,17 @@ Este portfólio reúne meus projetos mais relevantes em **desenvolvimento Front-
 
 ## 🚀 Funcionalidades
 
-- **Listagem dos meus projetos**: Exibição dos websites em formato de cards por uma API JSON.
-- **Integração de Contato**: Envio direto de mensagens para o meu e-mail profissional via EmailJS. Com validação dos campos e feedback visual após envio correto.
+- **Listagem de projetos**: Exibição dos websites em formato de cards por uma API JSON.
+- **Formulário de contato integrado**: Envio direto de mensagens para o meu e-mail profissional via EmailJS. Com validação dos campos e feedback visual após envio.
 - **Responsividade Total**: Design adaptável para mobile, tablet e desktop (media queries + mobile-first).
 
 ## 🌐 Deploy no GitHub Pages
 
-O projeto está disponível online via GitHub Pages. Acesse <a href="https://helzaaragao.github.io/Portfolio/">aqui</a> para visualizar.
+O projeto está disponível online via GitHub Pages. Acesse <a href="https://helzaaragao.github.io/Portfolio/" target="_blank">aqui</a> para visualizar.
 
 ### 🛠️ Dependências e Versões Utilizadas
 
-**React**: 18.2.0 | **Vite**: 6.3.5 | **Styled-componets**: 6.1.12 |**Radix-UI**: 1.2.0 | **Phosphor-icons/react**: 2.1.10 | **Emailjs/browser**: 4.4.1 | **React-Query**: 5.80.7
+**React**: 18.2.0 | **Vite**: 6.3.5 | **Styled-componets**: 6.1.12 | **Radix-UI**: 1.2.0 | **Phosphor-icons/react**: 2.1.10 | **Emailjs/browser**: 4.4.1 | **React-Query**: 5.80.7
 
 ### 📂 Como rodar o projeto na sua máquina local
 
